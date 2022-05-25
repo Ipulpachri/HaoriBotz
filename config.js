@@ -58,7 +58,7 @@ global.APIKeys = { // APIKey Here
   'https://api.xteam.xyz': 'buy',
   'https://api.lolhuman.xyz': 'ed6c4f2c72b6f92f7d201464',
   'https://zahirr-web.herokuapp.com': 'zahirgans',
-  'https://api.zeks.me': 'apivinz',
+  'https://api.zeks.me': 'CpGSLymOQy9KfTKgQZr9eDSYqqR',
   'https://pencarikode.xyz': 'pais',
   'https://apikey-bear.herokuapp.com': 'buy',
   'https://apikey-bear2.herokuapp.com': 'buy',
@@ -67,8 +67,8 @@ global.APIKeys = { // APIKey Here
 }
 
 lolkey = 'ed6c4f2c72b6f92f7d201464'
-zekskey = 'apivinz'
-xteamkey = 'buy'
+zekskey = 'CpGSLymOQy9KfTKgQZr9eDSYqqR'
+xteamkey = '7cf3fc56c3103d90'
 leyskey = 'dappakntlll'
 bearkey = 'buy'
 
@@ -82,14 +82,14 @@ namakontak2 = ''
 //kasihcaption = `Nih Kak`
 
 // Sticker WM
-global.packname = 'fαchrí вσtz' // ganti aja
-global.author = '© Fachri 🐾' // ganti aja
+global.packname = 'fαchrí вσtzン' // ganti aja
+global.author = '@sfdesign_id' // ganti aja
 
 //yyy
 bc = 'fαchrí-вσtz' //King Of Bear Broadcast
-footer = '\nꜰᴀᴄʜʀɪʙᴏᴛᴢ'
-namabot = '© fαchrí вσtz'
-namalu = 'ꜰᴀᴄʜʀɪ'
+footer = '\nᴹᴿ᭄fαchríвσtzン'
+namabot = '© ᴹᴿ᭄fαchríвσtzン'
+namalu = 'ᴹᴿ᭄fαchrí'
 global.botwm = '© ζαchrιβοτz'//UBAH JADI NAMAMU
 
 
