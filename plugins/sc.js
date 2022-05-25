@@ -22,15 +22,19 @@ let pp = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&s
 let info = `◪ 📮 *SCRIPT BOT*
 │ *Script FachriBotz :* 
 │ ╰ https://github.com/Ipulpachri/fachribotzv3
-│ *Base :* 
+│ ╰ https://www.mediafire.com/file/vvy7ki9a2cshl56/fachribotzv3-FachriBotzv3.zip/file
+│ 
+│ *Base :*
+│ ╰ https://github.com/Aziz01pro/HaoriBotz
+│ *Base Ori :* 
 │ ╰ https://github.com/bochilgaming/games-wabot
 │ *RestApi :* https://hardianto.xyz
 ╰─────═┅═────────
-📍 *N o t e :* 
+📍 *Note :* 
 • Jangan lupa minta izin owner sebelum menggunakan scriptnya kak!
 • Jangan Lupa kasih star & kasih credit
 `.trim()
-await conn.send2Button(m.chat, info, `🎮 Fachribotz`, 'Ok Fachri', 'ok', '💌 OWNER', '.owner', ftrol)
+await conn.send2Button(m.chat, info, `© ᴹᴿ᭄fαchríвσtzン`, 'Ok Fachri', 'ok', '💌 OWNER', '.owner', ftrol)
 }
 handler.help = ['sc']
 handler.tags = ['info']
