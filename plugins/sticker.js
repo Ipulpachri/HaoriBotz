@@ -1,63 +1,35 @@
 const { MessageType } = require('@adiwajshing/baileys')
 const { sticker } = require('../lib/sticker')
-const uploadFile = require('../lib/uploadFile')
-const uploadImage = require('../lib/uploadImage')
-let { webp2png } = require('../lib/webp2mp4')
-let fs = require('fs')
 let handler = async (m, { conn, args, usedPrefix, command }) => {
-const ftoko = {
-key: {
-			fromMe: false,
-			participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "status@broadcast" } : {})
-		},
-		message: {
-			"productMessage": {
-				"product": {
-					"productImage":{
-						"mimetype": "image/jpeg",
-						"jpegThumbnail": fs.readFileSync('./src/img1.png'), //Gambarnye
-					},
-					"title": `Hai ${conn.getName(m.sender)}~`, //Kasih namalu 
-					"description": `Rp 9.999.999.999`, 
-					"currencyCode": "Rp",
-					"priceAmount1000": "500000",
-					"retailerId": `ppk`,
-					"productImageCount": 1
-				},
-				    "businessOwnerJid": `628162633549@s.whatsapp.net`
-		}
-	}
-}
   let stiker = false
   try {
     let q = m.quoted ? m.quoted : m
     let mime = (q.msg || q).mimetype || ''
-    if (/webp/.test(mime)) {
+    if (/image/.test(mime)) {
       let img = await q.download()
-      let out = await webp2png(img)
-      if (!img) throw `balas stiker dengan perintah ${usedPrefix + command} <packname>|<author>`
-      stiker = await sticker(0, out, global.packname, global.author)
-    } else if (/image/.test(mime)) {
-      let img = await q.download()
-      let link = await uploadImage(img)
-      if (!img) throw `balas gambar dengan perintah ${usedPrefix + command} <packname>|<author>`
-      stiker = await sticker(0, link, global.packname, global.author)
+      if (!img) throw `balas gambar dengan caption *${usedPrefix + command}*`
+      stiker = await sticker(img, false, global.packname, global.author)
     } else if (/video/.test(mime)) {
       if ((q.msg || q).seconds > 11) return m.reply('Maksimal 10 detik!')
       let img = await q.download()
-      let link = await uploadFile(img)
-      if (!img) throw `balas video dengan perintah ${usedPrefix + command} <packname>|<author>`
-      stiker = await sticker(0, link, global.packname, global.author)
+      if (!img) throw `balas video/gif dengan caption *${usedPrefix + command}*`
+      stiker = await sticker(img, false, global.packname, global.author)
+    } else if (/webp/.test(mime)) {
+      let img = await q.download()
+      if (!img) throw `balas sticker dengan caption *${usedPrefix + command}*`
+      stiker = await sticker(img, false, global.packname, global.author)
     } else if (args[0]) {
       if (isUrl(args[0])) stiker = await sticker(false, args[0], global.packname, global.author)
       else return m.reply('URL tidak valid!')
     }
   } finally {
-    if (stiker) await conn.sendMessage(m.chat, stiker, MessageType.sticker, { quoted: ftoko})
-    else throw `Gagal${m.isGroup ? ', balas gambarnya!' : ''}`
+    if (stiker) conn.sendMessage(m.chat, stiker, MessageType.sticker, {
+      quoted: m
+    })
+    else throw 'Conversion failed'
   }
 }
-handler.help = ['stiker ', 'stiker <url>']
+handler.help = ['stiker (caption|reply media)', 'stiker <url>', 'stikergif (caption|reply media)', 'stikergif <url>']
 handler.tags = ['sticker']
 handler.command = /^s(tic?ker)?(gif)?(wm)?$/i
 
