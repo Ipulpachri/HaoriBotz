@@ -82,15 +82,15 @@ namakontak2 = ''
 //kasihcaption = `Nih Kak`
 
 // Sticker WM
-global.packname = 'fαchrí вσtzン' // ganti aja
+global.packname = 'fαchrí вσtzོン' // ganti aja
 global.author = '@sfdesign_id' // ganti aja
 
 //yyy
 bc = 'fαchrí-вσtz' //King Of Bear Broadcast
-footer = '\nᴹᴿ᭄fαchríвσtzン'
-namabot = '© ᴹᴿ᭄fαchríвσtzン'
-namalu = 'ᴹᴿ᭄fαchrí'
-global.botwm = '© ζαchrιβοτz'//UBAH JADI NAMAMU
+footer = '\nᴹᴿ᭄fαchríвσtzོン'
+namabot = '© ᴹᴿ᭄fαchríвσtzོン'
+namalu = 'ᴹᴿ᭄fαchríོン'
+global.botwm = '© ζαchrιβοτzོ'//UBAH JADI NAMAMU
 
 
 // 
