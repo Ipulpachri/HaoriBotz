@@ -30,6 +30,7 @@ const defaultMenu = {
 
 〓〓〓〓〓  𝙄𝙉𝙁𝙊 𝙐𝙎𝙀𝙍
 ➵͜͡✪ *Name:* %name
+➵͜͡✪ *Bio:* ${bioo ? bioo : ''}
 ➵͜͡✪ *Tags:* %tag
 ➵͜͡✪ *Premium:* %prems
 ➵͜͡✪ *Age:* %age
@@ -49,7 +50,9 @@ const defaultMenu = {
 〓〓〓〓〓  𝙄𝙉𝙁𝙊 𝘽𝙊𝙏
 ➵͜͡✪ *Nama Bot:* %me
 ➵͜͡✪ *Mode:* %mode
+➵͜͡✪ *Jadibot:* ${totaljadibot.length}
 ➵͜͡✪ *Owner:* %ow
+➵͜͡✪ *battery:* ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
 ➵͜͡✪ *Prefix:* [ %_p ]
 ➵͜͡✪ *Platform:* %platform
 ➵͜͡✪ *Merk Hp:* %merk
@@ -710,32 +713,10 @@ const ultah = new Date('october 17, 2023 23:59:59')
 
       
 
-    let txtmenu = `╭──═ ⳹°❀⊱ *INFO USER* ⊱❀° ═──···ɞ´-
-│➵͜͡✪ *Name:* ${name}
-│➵͜͡✪ *Tag:* ${tag}
-│➵͜͡✪ *Bio:* ${bioo ? bioo : ''}
-│➵͜͡✪ *Status:* ${premium ? 'Premium' : 'Free'} User
-│➵͜͡✪ *Limit:* ${global.db.data.users[m.sender].limit}
-┠──═ ⳹°❀⊱  *INFO BOT* ⊱❀° ═─···ɞ´-
-│➵͜͡✪ *Runtime:* ${uptime}
-│➵͜͡✪ *Baterai:* ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
-│➵͜͡✪ *Prefix :* [ ${_p} ]
-│➵͜͡✪ *Total User:* ${Object.keys(global.db.data.users).length}
-│➵͜͡✪ *Jadibot:* ${totaljadibot.length}
-│➵͜͡✪ *Blocked:* ${conn.blocklist.length}
-│➵͜͡✪ *Chat Banned:* ${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}
-│➵͜͡✪ *User Banned:* ${Object.entries(global.db.data.users).filter(user => user[1].banned).length}
-┠═ ⳹°❀⊱ *TAHUN BARU*  ⊱❀° ═─ɞ´-
-│➵͜͡✪ ${jhari} Hari ${jjam} Jam ${mmmenit} Menit ${ddetik} Detik
+    let txtmenu = `╭──═ ⳹°❀⊱ *MENU FACHRIBOTZ* ⊱❀° ═──···ɞ´-
+│ Silahkan Pilih List Menunya Kak.
 │
-┠═ ⳹°❀⊱ *RAMADHAN* ⊱❀° ═─ɞ´-
-│➵͜͡✪ ${harii} Hari ${jamm} Jam ${menitt} Menit ${detikk} Detik
-│
-┠═ °❀⊱ *ULTAH FACHRI* ⊱❀° ═─ɞ´
-│➵͜͡✪ ${ohari} Hari ${ojam} Jam ${onet} Menit ${detek} Detik
-┴
-✧
-┬ 📮 *Note* :
+│ 📮 *Note* :
 │ Beri Jeda Kak biar ga delay ^ω^.
 ╰━━━━━━━━━━━━━┈─ɞ
 
@@ -749,7 +730,7 @@ const ultah = new Date('october 17, 2023 23:59:59')
 
         "listMessage": {
 
-          "title": `✧────··[ Dashboard ]··────✧`.trim(),
+          "title": `✧────··[ DASHBOARD ]··────✧`.trim(),
 
           "description": `${ucapan()}, ${name} !`.trim(),
 
